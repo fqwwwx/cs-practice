@@ -1,3 +1,4 @@
+#1 Функция
 def winner(names: list[str], scores: list[float]) -> str:
     best = 0
     for i in range(1,len(scores)):
@@ -5,13 +6,13 @@ def winner(names: list[str], scores: list[float]) -> str:
             best = i
 
     return names[best]
-
+#2 Функция
 def average(scores: list[float]) -> float:
     if len(scores)== 0:
         return 0.0
 
     return round(sum(scores) / len(scores), 2)
-
+#3 Функция
 def ranking(names: list[str], scores: list[float]) -> list[str]:
     result = []
 
@@ -20,7 +21,7 @@ def ranking(names: list[str], scores: list[float]) -> list[str]:
 
     result.sort(key=lambda x: -x[0])
     return [name for score,name in result]
-
+#4 Функция
 def above_average(names: list[str], scores: list[float]) -> list[str]:
     avg = average(scores)
     result = []
@@ -29,7 +30,6 @@ def above_average(names: list[str], scores: list[float]) -> list[str]:
             result.append(names[i])
 
     return result
-#    
 names =  ["Аня", "Боря", "Вика"]
 scores = [7.0,   9.0,    9.0]
 print (winner(names,scores))
